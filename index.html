@@ -3,28 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Kidnapping - Text Adventure</title>
+    <title>The Kidnapping - A Text Adventure</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="game-container">
-        <h1>The Kidnapping - A Text Adventure</h1>
-        <p id="story">Loading game...</p>
-        
-        <div class="movement-buttons">
-            <button onclick="move('N')">⬆️ North</button>
-            <button onclick="move('S')">⬇️ South</button>
-            <button onclick="move('E')">➡️ East</button>
-            <button onclick="move('W')">⬅️ West</button>
-            <button onclick="move('NE')">↗️ North-East</button>
-            <button onclick="move('NW')">↖️ North-West</button>
-            <button onclick="move('SE')">↘️ South-East</button>
-            <button onclick="move('SW')">↙️ South-West</button>
+    <div id="game-container">
+        <h1>The Kidnapping</h1>
+        <div id="intro">
+            <label for="victim-name">Enter Victim's Name:</label>
+            <input type="text" id="victim-name" placeholder="e.g., Alice">
+            <label for="kidnapper-name">Enter Kidnapper's Name:</label>
+            <input type="text" id="kidnapper-name" placeholder="e.g., The Shadow">
+            <button id="start-game">Start Game</button>
         </div>
-
-        <p id="game-status"></p>
+        <div id="story-container" class="hidden">
+            <p id="story-text"></p>
+            <div id="choices"></div>
+        </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 </html>
