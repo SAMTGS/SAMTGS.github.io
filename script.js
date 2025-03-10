@@ -68,7 +68,7 @@ const story = {
     text: "Mustering courage, {victim} stands ready as the door bursts open. {kidnapper} appears, eyes burning with malice. With a cold smile, {kidnapper} taunts, 'You have a story to tell...'",
     choices: [
       { text: "Demand answers", next: "demand" },
-      { text: "Attack with the nail", next: "attack" }
+      { text: "Attack in confusion", next: "attack" }
     ]
   },
   "fight": {
@@ -250,6 +250,21 @@ const story = {
     text: "In a frantic scramble, {victim} dodges the trap and barely escapes the clutches of unseen assailants lurking in the dark.",
     choices: [
       { text: "Run to the corridor", next: "corridor" }
+    ]
+  },
+  // Newly added scene for escape outcomes
+  "escape": {
+    text: "{victim} dashes out into the night, heart pounding as the cold air fills your lungs. Freedom is finally achieved, yet the scars of this ordeal will forever remain.",
+    choices: [
+      { text: "THE END - Restart?", next: "intro" }
+    ]
+  },
+  // Newly added scene for examining symbols
+  "symbols": {
+    text: "As {victim} examines the mysterious symbols, ancient writings reveal that this chamber was once a sanctuary for lost souls. A hidden lever behind one of the relics seems to beckon.",
+    choices: [
+      { text: "Pull the lever", next: "unlock_door" },
+      { text: "Ignore the lever and try the key", next: "unlock_door" }
     ]
   }
 };
